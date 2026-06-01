@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style formulario.css">
+
+<!-- Fuentes -->
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- FOTO DE FONDO -->
+<div class="fondo-formulario"></div>
+
+<div class="overlay"></div>
+
+<header>
+    <div class="menu-toggle">
+        ☰
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="sobremi.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="contacto.html">Redes</a></li>
+            <li><a href="formulario.html">Formulario</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="formulario-contacto">
+
+    <h1>Contáctame</h1>
+    <p>Déjame tus datos y tu mensaje</p>
+
+      <form id="formulario">
+
+        <input type="text" id="nombre" placeholder="Nombre" required>
+
+        <input type="email" id="email" placeholder="Email" required>
+
+        <input type="tel" id="telefono" placeholder="Teléfono" required>
+
+        <textarea id="mensaje" placeholder="Escribe tu mensaje" rows="6" required></textarea>
+  <button type="submit">Enviar</button>
+    </form>
+
+</section>
+
+<script src="js/script.js"></script>
+
+
+<script>
+
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggle.addEventListener("click", ()=>{
+
+    menu.classList.toggle("activo");
+
+});
+
+</script>
+
+</body>
+</html>
+

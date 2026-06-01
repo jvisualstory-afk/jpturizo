@@ -1,0 +1,1965 @@
+
+
+/* ================= HERO ================= */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    padding-top:5px;
+}
+
+.hero p{
+    font-family:'DM Sans', sans-serif;
+    font-weight:300;
+    font-size:18px;
+    line-height:1.7;
+}
+
+
+/* ================= HEARDER Y MENU ================= */
+header{
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 80px;
+    box-sizing: border-box;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    margin-right: 40px;
+    padding: 0;
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 35.5px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    color: #ff0000;
+}
+
+
+.menu{
+
+    animation: bajarMenu 1s ease-out;
+}
+
+@keyframes bajarMenu{
+
+    from{
+        opacity: 0;
+
+        transform: translateY(-80px);
+    }
+
+    to{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* HERO CENTRADO */
+.inicio-hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.inicio-titulo{
+    text-align: left;
+    font-size: 250px;
+    letter-spacing: 3px; 
+    padding-bottom: 80px;
+    color: white;
+}
+
+
+
+/* ================= ANIMACION PAGINA DE INICIO ================= */
+.inicio-titulo{
+    animation: subirEntrada 1.2s linear forwards;
+}
+
+@keyframes subirEntrada{
+
+    from{
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.inicio-titulo{
+
+    animation:
+    subirEntrada 1.2s linear forwards,
+    cambioColor 3s ease forwards;
+
+    letter-spacing: 8px;
+
+    color: red;
+}
+
+/* CAMBIO DE COLOR */
+
+@keyframes cambioColor{
+
+    0%{
+        color: red;
+    }
+
+    50%{
+        color: rgb(255,120,120);
+    }
+
+    100%{
+        color: white;
+    }
+
+}
+
+
+.inicio-hero h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 250px;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    padding-bottom: 5px; 
+}
+
+
+/* PAG SOBRE MI */
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height:100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    display:flex;
+    flex-direction:column;
+}
+
+
+/* Layout texto izquierda - imagen derecha */
+.contenedor-principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 10%;
+}
+
+.bloque-texto{
+    width: 50%;
+}
+
+.bloque-imagen{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    opacity: 0.70;
+}
+
+/* Imagen circular */
+.bloque-imagen img{
+    width: 700px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    margin-top: 120px;
+    opacity: 0.70;
+
+}
+
+/* ================= ANIMACION PAGINA SOBRE MI. FOTO ================= */
+.bloque-imagen{
+
+    animation: moverIzquierda 1.2s ease-out forwards;
+}
+
+@keyframes moverIzquierda{
+
+    from{
+        opacity: 0;
+
+        transform: translateX(120px);
+    }
+
+    to{
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+/* ================= ANIMACION PAGINA SOBRE MI. FOTO ================= */
+
+.video-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: -1;
+}
+
+
+.btn-primary {
+  background: white;
+  color: black;
+  padding: 12px 25px; /* tamaño de botón */
+  text-decoration: none;
+  border-radius: 4px; 
+  font-weight: bold;
+  display: inline-block;
+  font-size: 23px;
+}
+
+
+/* ================= FOTO DE FONDO SOBRE MI ================= */
+
+.fondo-img{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("imagenes/sobremi_fondo.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    z-index: -2;
+}
+
+/* OVERLAY */
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
+
+/* ANIMACION */
+
+@keyframes aparecerFoto{
+
+    from{
+
+        opacity: 0;
+
+        transform: scale(1.08);
+
+        filter: blur(8px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        filter: blur(0);
+    }
+}
+
+/* ================= ANIMACION FOTO FONDO ================= */
+
+.fondo-img{
+
+    animation: entradaFondo 2.5s ease forwards;
+}
+
+/* ANIMACION */
+
+@keyframes entradaFondo{
+
+    from{
+
+        opacity: 0;
+
+        transform: scale(1.1);
+
+        filter: blur(10px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* ================= ANIMACION TITULO PAGINA SOBRE MI ================= */
+.title{
+    animation: entradaLineal 1.2s linear forwards;
+}
+
+@keyframes entradaLineal{
+
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+.contenedor-principal{
+    flex:1;
+}
+
+/* Encabezado principal */
+h1{
+    text-align:left;
+    font-family:'Bebas Neue', sans-serif;
+    font-size:120px;
+    letter-spacing:4px;
+    margin-bottom:5px;
+}
+
+.title{
+    color:rgb(255, 0, 0);
+}
+
+/* Subtítulo */
+h2{
+    font-family:'Raleway', sans-serif;
+    font-weight:300;
+    letter-spacing:2px;
+    font-size:60px;
+    margin-top:0;
+}
+
+/* Texto */
+p{
+    font-size:35px;
+    line-height:1.6;
+    margin-top:20px;
+}
+
+.descripcion p{
+    font-family:'DM Sans', sans-serif;
+    font-weight:300;
+    line-height:1.4;
+}
+/* ================= ANIMACION DESCRIPCION PAGINA SOBRE MI ================= */
+.descripcion{
+    animation: entradaLineal 1.2s linear forwards;
+}
+
+@keyframes entradaLineal{
+
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+/* ================= ANIMACION DESCRIPCION PAGINA SOBRE MI ================= */
+
+
+
+/* ================= FOTO DE FONDO  SOBRE MI ================= */
+
+.fondo-img-sobremi{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: url("imagenes/sobremi_fondo.jpeg") center/cover no-repeat;
+
+    z-index: -2;
+
+    opacity: 0;
+
+    animation: aparecerFondo 2s ease forwards;
+}
+
+
+/* OVERLAY OSCURO */
+
+.fondo-img-sobremi::after{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.45);
+}
+
+
+/* ================= ANIMACION ================= */
+
+@keyframes aparecerFondo{
+
+    from{
+
+        opacity: 0;
+
+        transform: scale(1.08);
+
+        filter: blur(10px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        filter: blur(0);
+    }
+ }
+
+
+
+/* ================= FOTO DE FONDO SOBRE MI ================= */
+/* ================= FOTO DE FONDO FOTOS ================= */
+
+.fondo-img-fotos{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: url("imagenes/galeria_fondo.jpeg") center center/cover no-repeat;
+
+    z-index: -2;
+
+    opacity: 0;
+
+    animation: aparecerFondoFotos 2.5s ease-out forwards;
+}
+
+/* OSCURECER FONDO */
+
+.overlay{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.55);
+
+    z-index: -1;
+}
+
+/* ANIMACIÓN */
+
+@keyframes aparecerFondoFotos{
+
+    from{
+
+        opacity: 0;
+
+        transform: scale(1.08);
+
+        filter: blur(12px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        filter: blur(0);
+    }
+
+}
+/* ================= GALERÍA ================= */
+
+/* ================= GALERÍA ================= */
+
+.galeria{
+    padding: 40px 4%;
+    position: relative;
+    z-index: 1;
+    }
+.galeria{
+    padding: 40px 4%;
+    position: relative;
+    z-index: 1;
+}
+
+.subtitulo-artistas{
+    text-align: center;
+    width: 100%;
+    display: block;
+    margin-bottom: 80px;
+    font-size: 80px;
+
+}
+
+.galeria-titulo{
+    text-align: center;
+    margin-bottom: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 250px;
+}
+
+.galeria-subtitulo{
+    color: rgb(255, 255, 255);
+    font-family: 'Bebas Neue', sans-serif;
+     text-align: center;
+     margin-top: 120px;
+    margin-bottom: 80px;
+    font-size: 80px;
+}
+
+
+/* Grid */
+.grid-galeria{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Contenedor de imagen */
+.item{
+    display: flex;
+    justify-content: center;
+}
+
+/* Imagen controlable */
+.item img{
+    width: 100%; 
+    height: auto;
+    aspect-ratio:4/5;
+    object-fit: cover;
+}
+
+
+
+
+/* ================= BODAS Y NOVIAS ================= */
+
+.subtitulo-seccion {
+    margin-top: 120px;
+    margin-bottom: 80px;
+    text-align: left;
+    font-size: 80px;
+    font-family: 'Bebas Neue', sans-serif;
+     text-align: center;
+    
+}
+
+.img-especial{
+    object-fit: contain !important;
+    height: auto;
+}
+
+.item img{
+    transition: transform 0.3s ease;
+}
+
+.item img:hover{
+    transform: scale(1.3);
+}
+.item img{
+    cursor: pointer;
+}
+/* ================= GALERÍA HORIZONTAL ================= */
+.foto-horizontal-grande{
+    grid-column: span 1;
+}
+
+.foto-horizontal-grande img{
+    width: 100%;
+    height: auto;
+}
+.foto-horizontal-grande img{
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+    object-fit:contain;
+}
+.item img{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* ================= BANNER ================= */
+
+.banner-fotos{
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGEN */
+
+.banner-img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: brightness(45%);
+}
+
+/* TEXTO */
+
+.banner-info{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: white;
+
+    z-index: 2;
+
+    animation: entradaBanner 1.5s ease;
+}
+
+.banner-info h1{
+    font-size: 220px;
+    font-family: 'Bebas Neue', sans-serif;
+
+    letter-spacing: 8px;
+}
+
+.banner-info p{
+    font-size: 28px;
+    font-family: 'Raleway', sans-serif;
+
+    letter-spacing: 4px;
+}
+
+/* TAMAÑO DE textos */
+
+.banner-info h1{
+    font-size: 180px;
+}
+
+.banner-info p{
+    font-size: 22px;
+}
+
+/* ANIMACIÓN */
+
+@keyframes entradaBanner{
+
+    from{
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+
+
+/* ================= FOTO FONDO PROYECTOS ================= */
+
+.fondo-proyectos{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("imagenes/proyectos_fondo.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    z-index: -2;
+
+    animation: entradaFondo 2.5s ease forwards;
+}
+
+/* OSCURECER FONDO */
+
+.overlay{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.45);
+
+    z-index: -1;
+}
+
+@keyframes entradaFondo{
+
+    from{
+
+        opacity: 0;
+
+        transform: scale(1.08);
+
+        filter: blur(8px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* ================= PROYECTOS ================= */
+
+.proyectos{
+padding:120px 10%;
+}
+
+.proyectos{
+    animation: entradaLineal 1.2s linear forwards;
+}
+
+@keyframes entradaLineal{
+
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.proyectos-contenedor{
+display:flex;
+justify-content:space-between;
+align-items:flex-start; /* esto alinea los títulos */
+gap:80px;
+}
+
+/* lado izquierdo */
+
+.proyectos-izquierda{
+width:50%;
+}
+
+.titulo-proyectos{
+font-size:120px;
+line-height:0.9;
+color: rgb(187, 0, 0);
+}
+
+.subtitulo-proyectos{
+font-size:60px;
+}
+
+.titulo-mahate{
+text-align: center;
+font-size:60px;
+color: rgb(255, 255, 255);
+margin-bottom: 10px;
+}
+
+
+
+/* lado derecho */
+
+.proyectos-derecha p{
+font-family:'DM Sans', sans-serif;
+font-size:32px;
+line-height:1.6;
+}
+/* ================= VIDEO PROYECTO ================= */
+
+.video-proyecto{
+
+    margin-top:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.video-proyecto iframe{
+
+    width:100%;
+
+    max-width:1700px;
+
+    aspect-ratio:16/9;
+
+    height:auto;
+
+    border:none;
+
+    border-radius:6px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+
+
+/* ================= COLABORACIONES================= */
+
+.colaboraciones{
+padding:120px 10%;
+}
+
+.colaboraciones{
+    animation: entradaLineal 1.2s linear forwards;
+}
+
+@keyframes entradaLineal{
+
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+
+.colaboraciones-contenedor{
+display:flex;
+justify-content:space-between;
+align-items:flex-start; /* esto alinea los títulos */
+gap:80px;
+}
+
+/* lado izquierdo */
+
+.colaboraciones-izquierda{
+width:50%;
+}
+
+.titulo-colaboraciones{
+font-size:120px;
+line-height:0.9;
+color: rgb(187, 0, 0);
+}
+
+.subtitulo-colaboraciones{
+font-size:60px;
+}
+
+.titulo-Calderitos{
+text-align: center;
+font-size:60px;
+color: rgb(255, 255, 255);
+margin-bottom: 10px;
+}
+
+
+
+/* lado derecho */
+
+.proyectos-derecha p{
+font-family:'DM Sans', sans-serif;
+font-size:32px;
+line-height:1.6;
+}
+
+/* ================= VIDEO LOA CALDERITOS ================= */
+.video-colaboraciones{
+
+    margin-top:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.video-colaboraciones iframe{
+
+    width:100%;
+
+    max-width:1700px;
+
+    aspect-ratio:16/9;
+
+    height:auto;
+
+    border:none;
+
+    border-radius:6px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+
+
+/* ================= IVC ================= */
+
+.ivc{
+padding:120px 10%;
+}
+
+.ivc{
+    animation: entradaLineal 1.2s linear forwards;
+}
+
+@keyframes entradaLineal{
+
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+.ivc-contenedor{
+display:flex;
+justify-content:space-between;
+align-items:flex-start; /* esto alinea los títulos */
+gap:80px;
+}
+
+/* lado izquierdo */
+
+.ivc-izquierda{
+width:50%;
+}
+
+.titulo-ivc{
+font-size:120px;
+line-height:0.9;
+color: rgb(187, 0, 0);
+}
+
+.subtitulo-ivc{
+font-size:60px;
+}
+
+.titulo-ivc{
+text-align: center;
+font-size:60px;
+color: rgb(255, 255, 255);
+margin-bottom: 10px;
+}
+
+
+
+/* lado derecho */
+
+.ivc-derecha p{
+font-family:'DM Sans', sans-serif;
+font-size:32px;
+line-height:1.6;
+}
+
+/* VIDEO */
+.video-ivc{
+margin-top:120px;
+display:flex;
+justify-content:center;
+}
+
+/* VIDEO GRANDE */
+.video-ivc video{
+width:100%;
+max-width:1700px;
+border-radius:6px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+
+/* ================= VIDEO IVC ================= */
+.video-ivc{
+
+    margin-top:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.video-ivc iframe{
+
+    width:100%;
+
+    max-width:1700px;
+
+    aspect-ratio:16/9;
+
+    height:auto;
+
+    border:none;
+
+    border-radius:6px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+
+
+/* ================= GODOY ================= */
+
+.Godoy{
+padding:120px 10%;
+}
+
+.Godoy{
+    animation: entradaLineal 1.2s linear forwards;
+}
+
+@keyframes entradaLineal{
+
+    from{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.Godoy-contenedor{
+display:flex;
+justify-content:space-between;
+align-items:flex-start; /* esto alinea los títulos */
+gap:80px;
+}
+
+/* lado izquierdo */
+
+.Godoy-izquierda{
+width:50%;
+}
+
+.titulo-Godoy{
+font-size:120px;
+line-height:0.9;
+color: rgb(187, 0, 0);
+}
+
+.subtitulo-Godoy{
+font-size:60px;
+}
+
+.titulo-Godoy{
+text-align: center;
+font-size:60px;
+color: rgb(255, 255, 255);
+margin-bottom: 10px;
+}
+
+
+
+/* lado derecho */
+
+.Godoy-derecha p{
+font-family:'DM Sans', sans-serif;
+font-size:32px;
+line-height:1.6;
+}
+
+/* ================= VIDEO DJ GODOY ================= */
+.video-Godoy{
+
+    margin-top:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.video-Godoy iframe{
+
+    width:100%;
+
+    max-width:1700px;
+
+    aspect-ratio:16/9;
+
+    height:auto;
+
+    border:none;
+
+    border-radius:6px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+
+
+/* ================= VIDEO CORPORATIVO ================= */
+.video-corporativo{
+
+    margin-top:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.video-corporativo iframe{
+
+    width:100%;
+
+    max-width:1700px;
+
+    aspect-ratio:16/9;
+
+    height:auto;
+
+    border:none;
+
+    border-radius:6px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+
+
+
+/* ================= PAGINA DE CONTACTO ================= */
+body{
+margin:0;
+padding:0;
+background-color:#000000;
+font-family:'DM Sans', sans-serif;
+}
+
+.inicio-jpturizo{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+padding:120px 10%;
+}
+
+
+.foto-central img{
+width:600px;
+height:600px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.foto-central{
+
+    animation: bajarMenu 1s ease-out;
+}
+
+@keyframes bajarMenu{
+
+    from{
+        opacity: 0;
+
+        transform: translateY(-80px);
+    }
+
+    to{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+.nombre-jpturizo{
+font-family:'Bebas Neue', sans-serif;
+font-size:160px;
+margin-top:20px;
+margin-bottom:50px;
+color:#ffffff;
+}
+
+.nombre-jpturizo{
+
+    animation: subirElemento 1.2s ease-out forwards;
+}
+
+@keyframes subirElemento{
+
+    from{
+        opacity: 0;
+
+        transform: translateY(120px);
+    }
+
+    to{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+.contactos{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:60px;
+}
+
+.contactos{
+
+    animation: subirElemento 1.2s ease-out forwards;
+}
+
+@keyframes subirElemento{
+
+    from{
+        opacity: 0;
+
+        transform: translateY(120px);
+    }
+
+    to{
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+.contacto-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.boton-contacto{
+text-decoration:none;
+background-color:rgb(255, 0, 0);
+color:white;
+padding:10px 25px;
+border-radius:6px;
+font-size:50px;
+transition:0.3s;
+}
+
+.boton-contacto:hover{
+transform:scale(1.05);
+}
+
+
+
+
+
+.fondo-contacto{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: url("imagenes/contacto_fondo.jpeg") center center/cover no-repeat;
+
+    z-index: -2;
+
+    opacity: 0;
+
+    animation: aparecerFondoFotos 2.5s ease-out forwards;
+}
+
+/* OSCURECER FONDO */
+
+.overlay{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.55);
+
+    z-index: -1;
+}
+
+/* ANIMACIÓN */
+
+@keyframes aparecerFondoFotos{
+
+    from{
+
+        opacity: 0;
+
+        transform: scale(1.08);
+
+        filter: blur(12px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+
+
+
+
+/* ================= PAGINA DE PIE DE PAGINA ================= */
+.pie-pagina{
+width:100%;
+background: linear-gradient(to right, black, #222, black);
+padding:12px 80px;
+box-sizing:border-box;
+}
+
+.footer-contacto{
+display:flex;
+justify-content:center;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.footer-contacto a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+font-size:28px;
+letter-spacing:1px;
+transition:0.3s;
+font-family:'DM Sans', sans-serif;
+}
+
+.footer-contacto a:hover{
+color:#ff0000;
+}.pie-pagina{
+width:100%;
+background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+padding:15px 80px;
+box-sizing:border-box;
+}
+
+.footer-contacto{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.footer-contacto a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+font-size:50px;
+letter-spacing:1px;
+transition:0.3s;
+font-family:'DM Sans', sans-serif;
+}
+
+.footer-contacto a:hover{
+color:#ff0000;
+}
+
+.copyright{
+text-align:center;
+color:white;
+font-size:18px;
+margin-top:10px;
+font-family:'DM Sans', sans-serif;
+letter-spacing:1px;
+}
+
+/* ================= FOOTER ARRIBA → ABAJO ================= */
+
+.pie-pagina{
+
+    animation: footerBaja 1.2s ease-out;
+}
+
+@keyframes footerBaja{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(-80px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+/* ================= FOOTER ARRIBA → ABAJO ================= */
+
+
+
+/* ================= APARICIÓN AL HACER SCROLL ================= */
+
+.reveal{
+
+    opacity: 0;
+
+    transform: translateY(150px);
+
+    transition: all 1.2s ease-out;
+}
+
+.reveal.active{
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   RESPONSIVE GENERAL
+========================================= */
+
+@media(max-width:1024px){
+
+    /* MENÚ */
+
+    .menu{
+        gap: 20px;
+    }
+
+    /* BANNERS */
+
+    .banner-info h1{
+        font-size: 140px;
+    }
+
+    .banner-info p{
+        font-size: 22px;
+    }
+
+    /* TÍTULOS */
+
+    .galeria-titulo{
+        font-size: 140px;
+    }
+
+    .galeria-subtitulo,
+    .subtitulo-seccion{
+        font-size: 60px;
+    }
+
+    /* GRIDS */
+
+    .grid-galeria{
+        grid-template-columns: repeat(2,1fr);
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE CELULAR
+========================================= */
+
+@media(max-width:768px){
+
+    /* BODY */
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* MENÚ */
+
+    .menu li a{
+        font-size: 22px;
+    }
+
+    /* BANNER */
+
+    .banner-fotos{
+        height: 70vh;
+    }
+
+    .banner-info h1{
+        font-size: 70px;
+        letter-spacing: 4px;
+    }
+
+    .banner-info p{
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    /* TÍTULOS GENERALES */
+
+    .galeria-titulo{
+        font-size: 70px;
+        margin-bottom: 40px;
+    }
+
+    .galeria-subtitulo,
+    .subtitulo-seccion{
+        font-size: 40px;
+
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+
+    /* TEXTOS */
+
+    p{
+        font-size: 15px;
+    }
+
+    /* GALERÍAS */
+
+    .grid-galeria{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* IMÁGENES */
+
+    .item img{
+        width: 100%;
+        height: auto;
+    }
+
+    /* VIDEOS */
+
+    video{
+        width: 100%;
+        height: auto;
+    }
+
+    /* FOOTER */
+
+    .pie-pagina{
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .footer-contacto{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+/* =====================================
+   MENU HAMBURGUESA
+===================================== */
+
+/* BOTÓN ☰ */
+
+.menu-toggle{
+    display: none;
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    font-size: 35px;
+    color: white;
+
+    z-index: 9999;
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+   RESPONSIVE MENU
+===================================== */
+
+@media(max-width:768px){
+
+    /* BOTÓN VISIBLE */
+
+    .menu-toggle{
+        display: block;
+    }
+
+    /* MENÚ */
+
+    .menu{
+
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 70%;
+        height: 100vh;
+
+        background: rgba(0,0,0,0.95);
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 30px;
+
+        transition: 0.5s;
+
+        z-index: 999;
+    }
+
+    /* CUANDO SE ABRE */
+
+    .menu.activo{
+        right: 0;
+    }
+
+    /* LINKS */
+
+    .menu li a{
+        font-size: 22px;
+    }
+
+}
+
+
+/* =====================================
+   RESPONSIVE PAG SOBRE MI
+===================================== */
+
+@media(max-width:768px){
+
+    .contenedor-principal{
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 40px;
+
+        padding: 120px 20px 60px;
+    }
+}
+@media(max-width:768px){
+
+    .contenedor-principal{
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 40px;
+
+        padding: 120px 20px 60px;
+    }
+}
+
+@media(max-width:768px){
+
+    .title{
+        font-size: 90px;
+        line-height: 0.9;
+    }
+
+}
+
+    /* IMAGEN */
+@media(max-width:768px){
+
+    .bloque-imagen{
+        display: flex;
+        justify-content: center;
+    }
+
+    .bloque-imagen img{
+
+        width: 260px !important;
+        height: 260px !important;
+
+        border-radius: 50%;
+
+        object-fit: cover;
+
+        aspect-ratio: 1/1;
+    }
+
+}
+
+    /* BOTÓN */
+
+    .btn-primary{
+        display: inline-block;
+
+        margin-top: 20px;
+    }
+@media(max-width:768px){
+
+    .bloque-imagen img{
+
+        width: 260px;
+        height: 260px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer-contacto a{
+        font-size: 14px;
+    }
+
+    .copyright{
+        font-size: 12px;
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .menu{
+
+        width: 70%;
+
+        padding: 0;
+
+        margin: 0;
+    }
+
+    .menu li{
+        list-style: none;
+    }
+
+    .menu li a{
+
+        font-size: 20px !important;
+
+        font-family: 'Bebas Neue', sans-serif;
+
+        letter-spacing: 2px;
+
+        text-decoration: none;
+    }
+
+    .menu-toggle{
+
+        font-size: 30px;
+
+        top: 15px;
+        right: 15px;
+    }
+ }
+ @media(max-width:768px){
+
+    .menu li a{
+
+        font-size: 16px !important;
+
+        line-height: 1.2 !important;
+
+        letter-spacing: 1px !important;
+    }
+
+}
+
+
+
+
+@media(max-width:768px){
+
+    .inicio-jpturizo{
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 30px;
+
+        padding: 120px 20px 60px;
+    }
+
+    .foto-central img{
+        width: 260px;
+        height: 260px;
+
+        object-fit: cover;
+
+        border-radius: 50%;
+    }
+
+    .nombre-jpturizo{
+        font-size: 60px;
+    }
+
+    .contactos{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}

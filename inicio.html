@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+
+<link rel="stylesheet" href="style.css">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- FOTO DE FONDO -->
+<div class="fondo-img"></div>
+<div class="overlay"></div>
+
+
+
+<header>
+    <div class="menu-toggle">
+        ☰
+    </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="contacto.html">Redes</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section class="inicio-hero">
+
+    <div class="inicio-contenido">
+        <h1 class="inicio-titulo">Jpturizo</h1>
+    </div>
+
+</section>
+
+<footer class="pie-pagina">
+
+<div class="footer-contacto">
+<a href="https://instagram.com/jpturizo_20">Instagram</a>
+<a href="https://wa.me/573022210307">WhatsApp</a>
+<a href="mailto:jvisualstory@gmail.com">Gmail</a>
+</div>
+<p class="copyright">© 2026 JPTurizo | Todos los derechos reservados</p>
+
+</footer>
+
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggle.addEventListener("click", ()=>{
+
+    menu.classList.toggle("activo");
+});
+</script>
+
+
+
+</body>
+</html>

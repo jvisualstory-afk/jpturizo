@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina web</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    
+<!-- FOTO DE FONDO -->
+<div class="fondo-img-sobremi"></div>
+
+    <!-- CAPA OSCURA -->
+    <div class="overlay"></div>
+
+
+
+    <div class="menu-toggle">
+        ☰
+    </div>
+    
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="sobremi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="fotos.html">Fotos</a></li>
+                <li><a href="contacto.html">Redes</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contenedor-principal">
+
+        <div class="bloque-texto">
+            <h1 class="title">Jpturizo</h1>
+
+            <section class="descripcion">
+                <h2>Fotógrafo | Filmmaker</h2>
+                <p>
+                    Soy jesus pretelt turizo, tecnico de iluminacion, Fotógrafo y filmaker para eventos sociales.
+                    Cuento con una trayectoria de cuatro años en el sector de eventos profesionales,
+                    en los cuales he tenido la oportunidad de trabajar con algunas de las
+                    empresas más reconocidas de Cartagena, participando en producciones de alto nivel.
+                    Actualmente curso Diseño Hipermedia, lo que complementa mi enfoque narrativo y técnico 
+                    en fotografía y producción audiovisual
+                </p>
+            </section>
+
+            <a href="https://wa.me/573022210307" target="_blank" class="btn-primary">
+                Contáctame
+            </a>
+        </div>
+
+        <div class="bloque-imagen">
+            <img src="imagenes/me.jpeg" alt="Imagen de perfil">
+        </div>
+
+    </div>
+
+    <footer class="pie-pagina">
+        <div class="footer-contacto">
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+            <a href="#">Gmail</a>
+        </div>
+
+        <p class="copyright">© 2026 JPTurizo | Todos los derechos reservados</p>
+    </footer>
+
+
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggle.addEventListener("click", ()=>{
+
+    menu.classList.toggle("activo");
+});
+</script>
+
+
+
+</body>
+</html>
